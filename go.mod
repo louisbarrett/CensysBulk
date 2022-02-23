@@ -1,4 +1,4 @@
-module louisbarrett/censysbulk
+module github.com/louisbarrett/censysbulk
 
 go 1.14
 

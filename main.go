@@ -7,11 +7,12 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"louisbarrett/censysbulk/querylist"
 	"net/http"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/louisbarrett/censysbulk/querylist"
 
 	gabs "github.com/Jeffail/gabs/v2"
 )
