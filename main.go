@@ -48,8 +48,15 @@ func main() {
 		log.Println(*CensysQuery)
 	}
 	queryResults := bulkQueryCensys(*CensysQuery)
-	fmt.Println(queryResults.StringIndent("", "  "))
-
+	dePaginatedResults := queryResults.Children()
+	var finalResults gabs.Container
+	for _, result := range dePaginatedResults {
+		pageResults := result.Children()
+		for _, pageResult := range pageResults {
+			finalResults.ArrayConcat(pageResult)
+		}
+	}
+	fmt.Println(finalResults.StringIndent("", "  "))
 }
 
 func bulkQueryCensys(query string) (allResults gabs.Container) {
