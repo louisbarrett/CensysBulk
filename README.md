@@ -16,7 +16,7 @@ Pull the source code using go get
 go get github.com/louisbarrett/censysbulk
 ```
 
-Install using go instal
+Install using go install
 ```
 go install github.com/louisbarrett/censysbulk
 ```
